@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Icons - Ready Bootstrap Dashboard</title>
+		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+		<link rel="stylesheet" href="assets/css/ready.css">
+		<link rel="stylesheet" href="assets/css/demo.css">
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+
+			a {
+				color: #000000;
+			}
+
+			.wrapper {
+				min-height: 100vh;
+				position: relative;
+				top: 0;
+				height: 100vh;
+				background-image: url(../../01.jpeg);
+				background-position-x: left;
+				background-position-y: top;
+				background-size: initial;
+				background-repeat-x: no-repeat;
+				background-repeat-y: no-repeat;
+				background-attachment: initial;
+				background-origin: initial;
+				background-clip: initial;
+				background-color: initial;
+			}
+
+			.tree {
+				margin: 0;
+				padding: 0;
+				padding-top: 54px;
+				background-color: #FFFFFF;
+				overflow: hidden;
+			}
+
+			/*隐藏input*/
+			.tree li input {
+				position: absolute;
+				left: 0;
+				opacity: 0;
+				z-index: 2;
+				cursor: pointer;
+				height: 1em;
+				width: 1em;
+				top: 0;
+			}
+
+			/*所有菜单项设置统一样式*/
+			.tree li {
+				position: relative;
+				list-style: none;
+			}
+
+			/*一级菜单加下边线*/
+			.tree>li {
+				border-bottom: 1px solid #d9d9d9;
+			}
+
+			/*给有子菜单的菜单项添加背景图标*/
+			.tree li label {
+				max-width: 999px;
+				cursor: pointer;
+				display: block;
+				margin: 0 0 0 -50px;
+				padding: 15px 10px 15px 70px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+
+			.tree li label:hover,
+			li label:focus {
+				background-color: #f2f2f2;
+				color: #fff;
+			}
+
+			/*清除所有展开的子菜单的display*/
+			.tree li input+ol {
+				display: none;
+			}
+
+			/*当input被选中时，给所有展开的子菜单设置样式*/
+			.tree input:checked+ol {
+				padding-left: 14px;
+				height: auto;
+				display: block;
+			}
+
+			.tree input:checked+ol>li {
+				height: auto;
+			}
+
+			/*末层菜单为A标签，设置样式*/
+			.tree li.file a {
+				margin: 0 -10px 0 -50px;
+				padding: 15px 20px 15px 70px;
+				text-decoration: none;
+				display: block;
+				color: #333333;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+
+			.tree li.file a:hover,
+			li.file a:focus {
+				background-color: #f2f2f2;
+				color: #fff;
+			}
+
+			/*不同层级的菜单字体大小不同*/
+			.tree .folderOne {
+				font-size: 18px;
+			}
+
+			.tree .folderTwo {
+				font-size: 16px;
+			}
+
+			/* .tree .folderThree{font-size:14px;} */
+
+			.holder {
+				width: 100%;
+				/* background: #f9f9f9; */
+				margin: 0px auto;
+				/* padding: 60px 0; */
+				/* font-size: 1em; */
+				padding: 0;
+				/* margin: 0; */
+				font-size: 62.5%;
+				font-family: Arial, sans-serif;
+			}
+
+			.center {
+				margin: 0px auto;
+				padding: 20px 0 0 0;
+			}
+
+			input[type="checkbox"] {
+				display: none;
+			}
+
+			input[type="checkbox"]+label {
+				cursor: pointer;
+				font-size: 1em;
+				padding: 8px 40px 21px 20px
+			}
+
+			[id^="checkbox-7-"]+label {
+				background-color: #FFF;
+				/* padding: 6px 43px 8px 9px; */
+				border-radius: 5px;
+				display: inline-block;
+				position: relative;
+				margin-right: 30px;
+				box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+				height: 35px;
+				overflow: hidden;
+				font-size: 1.3em !important;
+				color: #EEEEEE;
+				-webkit-transition: all 0.3s linear, color 0 linear;
+				transition: all 0.3s linear, color 0 linear;
+			}
+
+			[id^="checkbox-7-"]+label:after {
+				content: ' ';
+				position: absolute;
+				background: #FFF;
+				top: 4px;
+				right: 3px;
+				width: 24px;
+				display: block;
+				font-size: 1em !important;
+				height: 16px;
+				border-radius: 3px;
+				box-shadow: 0 0 1px rgba(0, 0, 0, 0.6), inset 0 -18px 15px -10px rgba(0, 0, 0, 0.05);
+				padding: 4px 0px;
+				text-align: center;
+				color: #496F7A;
+				margin-top: 5px;
+			}
+
+			[id^="checkbox-7-"]:checked+label {
+				color: #EEEEEE;
+
+			}
+
+			[id^="checkbox-7-"]+label>span {
+				position: relative;
+				z-index: 99999;
+				font-family: 'adelle-sans', sans-serif;
+				margin-top: 5px;
+			}
+
+			[id^="checkbox-7-"]:active+label:after {
+				box-shadow: 0 0 1px rgba(0, 0, 0, 0.6), inset 0 2px 6px rgba(0, 0, 0, 0.1), inset 0 -18px 15px -10px rgba(0, 0, 0, 0.05);
+				padding-top: 5px;
+				margin-top: 5px;
+			}
+
+			[id^="checkbox-7-"]:checked+label:after {
+				content: '\2715';
+				padding: 1px;
+				margin-top: 5px;
+			}
+
+			[id^="checkbox-7-"]+label:before {
+				content: ' ';
+				position: absolute;
+				background: #EEEEEE;
+				width: 0%;
+				height: 100%;
+				top: 0;
+				-webkit-transition: all 0.3s ease-in;
+				transition: all 0.3s ease-in;
+				left: 0;
+			}
+
+			[id^="checkbox-7-"]:checked+label:before {
+				content: ' ';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+				top: 0;
+				left: 0;
+			}
+
+			#checkbox-7-2+label:before {
+				width: 0;
+				height: 100%;
+				left: 0;
+				right: auto;
+			}
+
+			#checkbox-7-2:checked+label:before {
+				width: 100%;
+				height: 100%;
+			}
+
+			#checkbox-7-3+label:before {
+				width: 0;
+				height: 100%;
+				left: 0;
+				right: auto;
+			}
+
+			#checkbox-7-3:checked+label:before {
+				width: 100%;
+				height: 100%;
+			}
+
+			#checkbox-7-4+label:before {
+				width: 0;
+				height: 100%;
+				left: 0;
+				right: auto;
+			}
+
+			#checkbox-7-4:checked+label:before {
+				width: 100%;
+				height: 100%;
+			}
+
+			#checkbox-7-5+label:before {
+				width: 0;
+				height: 100%;
+				left: 0;
+				right: auto;
+			}
+
+			#checkbox-7-5:checked+label:before {
+				width: 100%;
+				height: 100%;
+			}
+
+			#checkbox-7-6+label:before {
+				width: 0;
+				height: 100%;
+				left: 0;
+				right: auto;
+			}
+
+			#checkbox-7-6:checked+label:before {
+				width: 100%;
+				height: 100%;
+			}
+
+			#checkbox-7-7+label:before {
+				width: 0;
+				height: 100%;
+				left: 0;
+				right: auto;
+			}
+
+			#checkbox-7-7:checked+label:before {
+				width: 100%;
+				height: 100%;
+			}
+
+			#paiming p {
+				font-size: 25px;
+				font-family: '宋体';
+			}
+		</style>
+
+	</head>
+	<body>
+		<!-- 页面整体 -->
+		<div class="wrapper">
+			<!-- 上部导航栏 -->
+			<div class="main-header" style="background-color: #454545;">
+				<div class="logo-header" style="color: #FFFFFF;">
+					<!-- <a href="index.html" class="logo" > -->
+						成绩分析可视化系统
+					<!-- </a> -->
+					<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse"
+					 aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<button class="topbar-toggler more"><i class="la la-ellipsis-v"></i></button>
+				</div>
+				<nav class="navbar navbar-header navbar-expand-lg">
+					<div class="container-fluid">
+
+						<!-- 搜索框 -->
+						<form class="navbar-left navbar-form nav-search mr-md-3" action="" style="padding: 10px 0 0 0;">
+							<div class="input-group" style="margin-top: 10px;">
+								<input type="text" placeholder="请输入学生学号 ..." class="form-control" id="getId1">
+								<div class="input-group-append">
+									<span class="input-group-text">
+										<button type="button" id="getId2" style="border: #F0F0F0 ;background-color:#EEEEEE ;">
+											<i class="la la-search search-icon" style="display:block;"></i>
+										</button>
+									</span>
+								</div>
+							</div>
+						</form>
+
+						<!-- 复选框 -->
+						<div class="holder">
+							<div class="center">
+								<input type="checkbox" id="checkbox-7-1" name="checked" checked="checked" /><label for="checkbox-7-1" id="lable-1"
+								 style="display:none;"><span>2013年</span></label>
+								<input type="checkbox" id="checkbox-7-2" name="checked" checked="checked" /><label for="checkbox-7-2" id="lable-2"
+								 style="display:none;"><span>2014年</span></label>
+								<input type="checkbox" id="checkbox-7-3" name="checked" checked="checked" /><label for="checkbox-7-3" id="lable-3"
+								 style="display:none;"><span>2015年</span></label>
+								<input type="checkbox" id="checkbox-7-4" name="checked" checked="checked" /><label for="checkbox-7-4" id="lable-4"
+								 style="display:none;"><span>2016年</span></label>
+								<input type="checkbox" id="checkbox-7-5" name="checked" checked="checked" /><label for="checkbox-7-5" id="lable-5"
+								 style="display:none;"><span>2017年</span></label>
+								<input type="checkbox" id="checkbox-7-6" name="checked" checked="checked" /><label for="checkbox-7-6" id="lable-6"
+								 style="display:none;"><span>2018年</span></label>
+								<input type="checkbox" id="checkbox-7-7" name="checked" checked="checked" /><label for="checkbox-7-7" id="lable-7"
+								 style="display:none;"><span>所有年份</span></label>
+							</div>
+						</div>
+
+
+
+						<!-- 
+						右上角的人物头像 -->
+						<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+						</ul>
+					</div>
+				</nav>
+			</div>
+
+			<!-- 左部导航栏 -->
+			<div class="sidebar" style="background-color: #454545;">
+				<ol class="tree" style="background-color: #454545;">
+					<li>
+						<label for="folder5" class="folderOne"><a href="map.html" style="color: #ffffff;">地图分布</a></label> <input type="checkbox" id="folder5" />
+						<!-- 				        <ol>  
+								            <li class="file folderTwo"><a href="#">实时数据</a></li> 
+								            <li class="file folderTwo"><a href="#">实时数据</a></li> 
+								        </ol>  -->
+					</li>
+					<li>
+						<label for="folder3" class="folderOne" ><span style="color: #ffffff;">个人</span></label> <input type="checkbox" id="folder3" style="color: #ffffff;"/>
+						<ol>
+							<li class="file folderTwo"><a href="xiaofei.html" style="color: #ffffff;">消费情况</a></li>
+							<li class="file folderTwo"><a href="student-grade2.html" style="color: #ffffff;">分数</a></li>
+						</ol>
+					</li>
+					<li>
+						<label for="folder4" class="folderOne" href="classGrade.html"><a href="classGrade.html" style="color: #ffffff;">班级</a></label> <input
+						 type="checkbox" id="folder4" />
+						<!-- 				        <ol>  
+								            <li class="file folderTwo"><a href="#">班级成绩</a></li> 
+								            <li class="file folderTwo"><a href="#">实时数据</a></li> 
+								        </ol>  -->
+					</li>
+				</ol>
+			</div>
+			
+			
+			<!-- 主要内容 -->
+			<div class="main-panel" style="background:url(../img/pumpkin.png);">
+				<div class="content">
+					<div style="display: flex;flex-direction: row;justify-content:space-around; min-width: 1600px; vertical-align: bottom;">
+						<div id="gradeLeft" style="width: 500px; height: 500px;display: inline-block;"></div>
+						<div id="gradeRight" style="width: 800px; height: 500px;display: inline-block;"></div>
+						<div style="display: inline-block;height: 500px;width: 300px; ">
+							<select id="testselect" onchange="dip()" style="display: block;"></select>
+							<div id="paiming" style="width: 300px; height: 470px;display: inline-block; color: #fff;"></div>
+						</div>
+					</div>
+					<!-- <div id="gradeLeft" style="width: 500px; height: 500px;display: inline-block;border:1px solid #000;"></div>
+					<div id="gradeRight" style="width: 800px; height: 500px;display: inline-block;border:1px solid #000;"></div> -->
+					<div style="display: flex;flex-direction: row;justify-content:space-around; min-width: 1600px; vertical-align: bottom;">
+						<div id="kaoqin" style="width: 1300px; height: 700px;display:inline-block;"></div>
+						<div style="width: 300px;height:700px ;display: inline-block;">
+							<p style="font-size: 20px;font-weight: bold; color: #fff;">考勤内容词云图展示</p>
+							<div id="ciyun" style="width: 300px;height:680px ;display: inline-block;"> </div>
+						</div>
+					</div>
+					<!-- <div id="paiming" style="width: 1300px; height: 400px;display: block;border:1px solid #000;"></div> -->
+				</div>
+
+			</div>
+		</div>
+	</body>
+
+
+
+	<!-- 他们的 -->
+	<script src="assets/js/core/jquery.3.2.1.min.js"></script>
+	<script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="assets/js/core/popper.min.js"></script>
+	<script src="assets/js/core/bootstrap.min.js"></script>
+	<script src="assets/js/plugin/chartist/chartist.min.js"></script>
+	<script src="assets/js/plugin/chartist/plugin/chartist-plugin-tooltip.min.js"></script>
+	<script src="assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+	<script src="assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+	<script src="assets/js/plugin/jquery-mapael/jquery.mapael.min.js"></script>
+	<script src="assets/js/plugin/jquery-mapael/maps/world_countries.min.js"></script>
+	<script src="assets/js/plugin/chart-circle/circles.min.js"></script>
+	<script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+	<script src="assets/js/ready.min.js"></script>
+	<script type="text/javascript">
+		var iconClass = ['la-500px', 'la-adjust', 'la-adn', 'la-align-center', 'la-align-justify',
+			'la-align-left', 'la-align-right', 'la-amazon', 'la-ambulance', 'la-anchor', 'la-android', 'la-angellist',
+			'la-angle-double-down', 'la-angle-double-left', 'la-angle-double-right', 'la-angle-double-up', 'la-angle-down',
+			'la-angle-left', 'la-angle-right', 'la-angle-up', 'la-apple', 'la-archive', 'la-area-chart',
+			' la-arrow-circle-down', 'la-arrow-circle-left', 'la-arrow-circle-o-down', 'la-arrow-circle-o-left',
+			'la-arrow-circle-o-right', 'la-arrow-circle-o-up', 'la-arrow-circle-right', 'la-arrow-circle-up', 'la-arrow-down',
+			'la-arrow-left', 'la-arrow-right', 'la-arrow-up', 'la-arrows', 'la-arrows-alt', 'la-arrows-h', 'la-arrows-v',
+			'la-asterisk', 'la-at', 'la-automobile', 'la-backward', 'la-balance-scale', 'la-ban', 'la-bank', 'la-bar-chart',
+			'la-bar-chart-o', 'la-barcode', 'la-bars', 'la-battery-0', 'la-battery-1', 'la-battery-2', 'la-battery-3',
+			'la-battery-4', 'la-battery-empty', 'la-battery-full', 'la-battery-half', 'la-battery-quarter',
+			'la-battery-three-quarters', 'la-bed', 'la-beer', 'la-behance', 'la-behance-square', 'la-bell', 'la-bell-o',
+			'la-bell-slash', 'la-bell-slash-o', 'la-bicycle', 'la-binoculars', 'la-birthday-cake', 'la-bitbucket',
+			'la-bitbucket-square', 'la-bitcoin', 'la-black-tie', 'la-bold', 'la-bolt', 'la-bomb', 'la-book', 'la-bookmark',
+			'la-bookmark-o', 'la-briefcase', 'la-btc', 'la-bug', 'la-building', 'la-building-o', 'la-bullhorn', 'la-bullseye',
+			'la-bus', 'la-buysellads', 'la-cab', 'la-calculator', 'la-calendar', 'la-calendar-check-o', 'la-calendar-minus-o',
+			'la-calendar-o', 'la-calendar-plus-o', 'la-calendar-times-o', 'la-camera', 'la-camera-retro', 'la-car',
+			'la-caret-down', 'la-caret-left', 'la-caret-right', 'la-caret-square-o-down', 'la-toggle-down',
+			'la-caret-square-o-left', 'la-toggle-left', 'la-caret-square-o-right', 'la-toggle-right', 'la-caret-square-o-up',
+			'la-toggle-up', 'la-caret-up', 'la-cart-arrow-down', 'la-cart-plus', 'la-cc', 'la-cc-amex', 'la-cc-diners-club',
+			'la-cc-discover', 'la-cc-jcb', 'la-cc-mastercard', 'la-cc-paypal', 'la-cc-stripe', 'la-cc-visa', 'la-certificate',
+			'la-chain', 'la-chain-broken', 'la-check', 'la-check-circle', 'la-check-circle-o', 'la-check-square',
+			'la-check-square-o', 'la-chevron-circle-down', 'la-chevron-circle-left', 'la-chevron-circle-right',
+			'la-chevron-circle-up', 'la-chevron-down', 'la-chevron-left', 'la-chevron-right', 'la-chevron-up', 'la-child',
+			'la-chrome', 'la-circle', 'la-circle-o', 'la-circle-o-notch', 'la-circle-thin', 'la-clipboard', 'la-clock-o',
+			'la-clone', 'la-close', 'la-cloud', 'la-cloud-download', 'la-cloud-upload', 'la-cny', 'la-code', 'la-code-fork',
+			'la-codepen', 'la-coffee', 'la-cog', 'la-cogs', 'la-columns', 'la-comment', 'la-comment-o', 'la-commenting',
+			'la-commenting-o', 'la-comments', 'la-comments-o', 'la-compass', 'la-compress', 'la-connectdevelop', 'la-contao',
+			'la-copy', 'la-copyright', 'la-creative-commons', 'la-credit-card', 'la-crop', 'la-crosshairs', 'la-css3',
+			'la-cube', 'la-cubes', 'la-cut', 'la-cutlery', 'la-dashboard', 'la-dashcube', 'la-database', 'la-dedent',
+			'la-delicious', 'la-desktop', 'la-deviantart', 'la-diamond', 'la-digg', 'la-dollar', 'la-dot-circle-o',
+			'la-download', 'la-dribbble', 'la-dropbox', 'la-drupal', 'la-edit', 'la-eject', 'la-ellipsis-h', 'la-ellipsis-v',
+			'la-empire', 'la-ge', 'la-envelope', 'la-envelope-o', 'la-envelope-square', 'la-eraser', 'la-eur', 'la-euro',
+			'la-exchange', 'la-exclamation', 'la-exclamation-circle', 'la-exclamation-triangle', 'la-expand', 'la-expeditedssl',
+			'la-external-link', 'la-external-link-square', 'la-eye', 'la-eye-slash', 'la-eyedropper', 'la-facebook',
+			'la-facebook-f', 'la-facebook-official', 'la-facebook-square', 'la-fast-backward', 'la-fast-forward', 'la-fax',
+			'la-female', 'la-fighter-jet', 'la-file', 'la-file-archive-o', 'la-file-audio-o', 'la-file-code-o',
+			'la-file-excel-o', 'la-file-image-o', 'la-file-movie-o', 'la-file-o', 'la-file-pdf-o', 'la-file-photo-o',
+			'la-file-picture-o', 'la-file-powerpoint-o', 'la-file-sound-o', 'la-file-text', 'la-file-text-o', 'la-file-video-o',
+			'la-file-word-o', 'la-file-zip-o', 'la-files-o', 'la-film', 'la-filter', 'la-fire', 'la-fire-extinguisher',
+			'la-firefox', 'la-flag', 'la-flag-checkered', 'la-flag-o', 'la-flash', 'la-flask', 'la-flickr', 'la-floppy-o',
+			'la-folder', 'la-folder-o', 'la-folder-open', 'la-folder-open-o', 'la-font', 'la-fonticons', 'la-forumbee',
+			'la-forward', 'la-foursquare', 'la-frown-o', 'la-futbol-o', 'la-soccer-ball-o', 'la-gamepad', 'la-gavel', 'la-gbp',
+			'la-gear', 'la-gears', 'la-genderless', 'la-get-pocket', 'la-gg', 'la-gg-circle', 'la-gift', 'la-git',
+			'la-git-square', 'la-github', 'la-github-alt', 'la-github-square', 'la-glass', 'la-globe', 'la-google',
+			'la-google-plus', 'la-google-plus-square', 'la-google-wallet', 'la-graduation-cap', 'la-gratipay', 'la-gittip',
+			'la-group', 'la-h-square', 'la-hacker-news', 'la-hand-grab-o', 'la-hand-lizard-o', 'la-hand-o-down',
+			'la-hand-o-left', 'la-hand-o-right', 'la-hand-o-up', 'la-hand-paper-o', 'la-hand-peace-o', 'la-hand-pointer-o',
+			'la-hand-rock-o', 'la-hand-scissors-o', 'la-hand-spock-o', 'la-hand-stop-o', 'la-hdd-o', 'la-header',
+			'la-headphones', 'la-heart', 'la-heart-o', 'la-heartbeat', 'la-history', 'la-home', 'la-hospital-o', 'la-hotel',
+			'la-hourglass', 'la-hourglass-1', 'la-hourglass-2', 'la-hourglass-3', 'la-hourglass-end', 'la-hourglass-half',
+			'la-hourglass-o', 'la-hourglass-start', 'la-houzz', 'la-html5', 'la-i-cursor', 'la-ils', 'la-image', 'la-inbox',
+			'la-indent', 'la-industry', 'la-info', 'la-info-circle', 'la-inr', 'la-instagram', 'la-institution',
+			'la-internet-explorer', 'la-ioxhost', 'la-italic', 'la-joomla', 'la-jpy', 'la-jsfiddle', 'la-key', 'la-keyboard-o',
+			'la-krw', 'la-language', 'la-laptop', 'la-lastfm', 'la-lastfm-square', 'la-leaf', 'la-leanpub', 'la-legal',
+			'la-lemon-o', 'la-level-down', 'la-level-up', 'la-life-bouy', 'la-life-buoy', 'la-life-ring', 'la-support',
+			'la-life-saver', 'la-lightbulb-o', 'la-line-chart', 'la-link', 'la-linkedin', 'la-linkedin-square', 'la-linux',
+			'la-list', 'la-list-alt', 'la-list-ol', 'la-list-ul', 'la-location-arrow', 'la-lock', 'la-long-arrow-down',
+			'la-long-arrow-left', 'la-long-arrow-right', 'la-long-arrow-up', 'la-magic', 'la-magnet', 'la-mail-forward',
+			'la-mail-reply', 'la-mail-reply-all', 'la-male', 'la-map', 'la-map-marker', 'la-map-o', 'la-map-pin',
+			'la-map-signs', 'la-mars', 'la-mars-stroke-v', 'la-maxcdn', 'la-meanpath', 'la-medium', 'la-medkit', 'la-meh-o',
+			'la-mercury', 'la-microphone', 'la-microphone-slash', 'la-minus', 'la-minus-circle', 'la-minus-square',
+			'la-minus-square-o', 'la-mobile', 'la-mobile-phone', 'la-money', 'la-moon-o', 'la-mortar-board', 'la-motorcycle',
+			'la-mouse-pointer', 'la-music', 'la-navicon', 'la-neuter', 'la-newspaper-o', 'la-object-group', 'la-object-ungroup',
+			'la-odnoklassniki', 'la-odnoklassniki-square', 'la-opencart', 'la-openid', 'la-opera', 'la-optin-monster',
+			'la-outdent', 'la-pagelines', 'la-paint-brush', 'la-paper-plane', 'la-send', 'la-paper-plane-o', 'la-send-o',
+			'la-paperclip', 'la-paragraph', 'la-paste', 'la-pause', 'la-paw', 'la-paypal', 'la-pencil', 'la-pencil-square',
+			'la-pencil-square-o', 'la-phone', 'la-phone-square', 'la-photo', 'la-picture-o', 'la-pie-chart', 'la-pied-piper',
+			'la-pied-piper-alt', 'la-pinterest', 'la-pinterest-p', 'la-pinterest-square', 'la-plane', 'la-play',
+			'la-play-circle', 'la-play-circle-o', 'la-plug', 'la-plus', 'la-plus-circle', 'la-plus-square', 'la-plus-square-o',
+			'la-power-off', 'la-print', 'la-puzzle-piece', 'la-qq', 'la-qrcode', 'la-question', 'la-question-circle',
+			'la-quote-left', 'la-quote-right', 'la-ra', 'la-random', 'la-rebel', 'la-recycle', 'la-reddit', 'la-reddit-square',
+			'la-refresh', 'la-registered', 'la-renren', 'la-reorder', 'la-repeat', 'la-reply', 'la-reply-all', 'la-retweet',
+			'la-rmb', 'la-road', 'la-rocket', 'la-rotate-left', 'la-rotate-right', 'la-rouble', 'la-rss', 'la-feed',
+			'la-rss-square', 'la-rub', 'la-ruble', 'la-rupee', 'la-safari', 'la-save', 'la-scissors', 'la-search',
+			'la-search-minus', 'la-search-plus', 'la-sellsy', 'la-server', 'la-share', 'la-share-alt', 'la-share-alt-square',
+			'la-share-square', 'la-share-square-o', 'la-shekel', 'la-sheqel', 'la-shield', 'la-ship', 'la-shirtsinbulk',
+			'la-shopping-cart', 'la-sign-in', 'la-sign-out', 'la-signal', 'la-simplybuilt', 'la-sitemap', 'la-skyatlas',
+			'la-skype', 'la-slack', 'la-sliders', 'la-slideshare', 'la-smile-o', 'la-sort', 'la-unsorted', 'la-sort-alpha-asc',
+			'la-sort-alpha-desc', 'la-sort-amount-asc', 'la-sort-amount-desc', 'la-sort-asc', 'la-sort-up', 'la-sort-desc',
+			'la-sort-down', 'la-sort-numeric-asc', 'la-sort-numeric-desc', 'la-soundcloud', 'la-space-shuttle', 'la-spinner',
+			'la-spoon', 'la-spotify', 'la-square', 'la-square-o', 'la-stack-exchange', 'la-stack-overflow', 'la-star',
+			'la-star-half', 'la-star-half-o', 'la-star-half-full', 'la-star-half-empty', 'la-star-o', 'la-steam',
+			'la-steam-square', 'la-step-backward', 'la-step-forward', 'la-stethoscope', 'la-sticky-note', 'la-sticky-note-o',
+			'la-stop', 'la-street-view', 'la-strikethrough', 'la-stumbleupon', 'la-stumbleupon-circle', 'la-subscript',
+			'la-subway', 'la-suitcase', 'la-sun-o', 'la-superscript', 'la-table', 'la-tablet', 'la-tachometer', 'la-tag',
+			'la-tags', 'la-tasks', 'la-taxi', 'la-television', 'la-tv', 'la-tencent-weibo', 'la-terminal', 'la-text-height',
+			'la-text-width', 'la-th', 'la-th-large', 'la-th-list', 'la-thumb-tack', 'la-thumbs-down', 'la-thumbs-o-down',
+			'la-thumbs-o-up', 'la-thumbs-up', 'la-ticket', 'la-times', 'la-remove', 'la-times-circle', 'la-times-circle-o',
+			'la-tint', 'la-toggle-off', 'la-toggle-on', 'la-trademark', 'la-train', 'la-trash', 'la-trash-o', 'la-tree',
+			'la-trello', 'la-tripadvisor', 'la-trophy', 'la-truck', 'la-try', 'la-tty', 'la-tumblr', 'la-tumblr-square',
+			'la-turkish-lira', 'la-twitch', 'la-twitter', 'la-twitter-square', 'la-umbrella', 'la-underline', 'la-undo',
+			'la-university', 'la-unlink', 'la-unlock', 'la-unlock-alt', 'la-upload', 'la-usd', 'la-user', 'la-user-md',
+			'la-user-plus', 'la-user-secret', 'la-user-times', 'la-users', 'la-venus', 'la-venus-double', 'la-venus-mars',
+			'la-viacoin', 'la-video-camera', 'la-vimeo',
+			'la-vimeo-square la-vine la-vk la-volume-down la-volume-off la-volume-up la-warning la-wechat', 'la-weibo',
+			'la-weixin', 'la-whatsapp', 'la-wheelchair', 'la-wifi', 'la-wikipedia-w', 'la-windows', 'la-won', 'la-wordpress',
+			'la-wrench', 'la-xing', 'la-xing-square', 'la-y-combinator', 'la-y-combinator-square', 'la-yahoo', 'la-yc',
+			'la-yc-square', 'la-yelp', 'la-yen', 'la-youtube', 'la-youtube-play', 'la-youtube-square'
+		];
+		var rowDemoIcon = "#row-demo-icon";
+		for (i = 0; i < iconClass.length; i++) {
+			$(rowDemoIcon).append('<div class="col-md-3"> <div class="demo-icon"> <div class="icon-preview"><i class="la ' +
+				iconClass[i] + '"></i></div> <div class="icon-class">la ' + iconClass[i] + '</div> </div> </div>');
+		}
+	</script>
+
+	<!-- 我们的 -->
+	<script src="../js/echarts.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/Grade.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../ourJs/paiMing.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/echarts-liquidfill.js" type="text/javascript" charset="utf-8"></script>
+	<!-- <script src="ourJs/student-grade.js" type="text/javascript" charset="utf-8"></script> -->
+	<script src="../ourJs/gradeSelf.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../ourJs/all.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../ourJs/classBreak.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../ourJs/personBreak.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/d3.js"></script>
+	<script src="../js/d3.layout.cloud.js"></script>
+	<script src="../ourJs/wordcloud.js"></script>
+		<script src="../js/halloween.js" type="text/javascript" charset="utf-8"></script>
+
+
+	<script type="text/javascript">
+		var testname = []; //考试名称数组
+
+
+		// 获取搜索并判断此学生哪些年存在记录
+		var getId2 = document.getElementById("getId2");
+
+		//*****************************************************搜索按钮*******************************************		
+		getId2.addEventListener("click", function() {
+			let id = document.getElementById('getId1').value;
+			let judge = new Array();
+			judge = [0, 0, 0, 0, 0, 0];
+			var hobbies = document.getElementsByName("checked");
+			
+			function isSelectAll() {
+
+				var hobbies = document.getElementsByName("hobby");
+
+
+				for (i = 0; i < hobbies.length; i++) {
+					if (hobbies[i].checked) {
+						return false;
+					}
+				}
+				return true;
+			}
+
+			if (isSelectAll()) {
+				for (i = 0; i < hobbies.length; i++) {
+					hobbies[i].checked = true;
+				}
+			} else {
+				for (i = 0; i < hobbies.length; i++) {
+					hobbies[i].checked = false;
+				}
+			}
+
+
+
+			var judge1 = 0;
+			for (i = 0; i < all.length; i++) {
+				if (all[i][0] == id) {
+					judge1 = 1;
+					break;
+				}
+			}
+			if (judge1 == 0) {
+				alert('请输入正确的学号')
+			} else {
+
+
+				for (i = 3; i < (judge.length + 3); i++) {
+					let exe = 'grade' + i;
+					for (j = 0; j < eval(exe).length; j++) {
+						if (id == eval(exe)[j][0]) {
+							judge[i - 3] = 1;
+							break;
+						}
+					}
+				}
+				for (i = 0; i < judge.length; i++) {
+					let obj = document.getElementById('checkbox-7-' + (i + 1));
+					let label = document.getElementById("lable-" + (i + 1));
+					// console.log(label.style.display);
+					obj.disabled = false;
+					label.style.display = "";
+					// lable.display=
+					if (judge[i] == 0) {
+						// console.log(obj);
+						obj.disabled = true;
+						label.style.display = "none";
+						// console.log(obj);
+					}
+				}
+				console.log(judge);
+				let labelHy = document.getElementById("lable-7");
+				labelHy.style.display = "";
+			}
+		});
+
+		//*****************************************************复选框*******************************************	
+		// 给年份的按钮赋方法
+		var setGame1 = document.getElementById("checkbox-7-1")
+		var setGame2 = document.getElementById("checkbox-7-2")
+		var setGame3 = document.getElementById("checkbox-7-3")
+		var setGame4 = document.getElementById("checkbox-7-4")
+		var setGame5 = document.getElementById("checkbox-7-5")
+		var setGame6 = document.getElementById("checkbox-7-6")
+		var setGame7 = document.getElementById("checkbox-7-7")
+
+		setGame1.addEventListener("click", function() {
+			// 判断其他的按钮是否为未开启状态
+			if (!$('#checkbox-7-2').is(':checked')) {
+				// do something
+				setGame2.click();
+			}
+			if (!$('#checkbox-7-3').is(':checked')) {
+				// do something
+				setGame3.click();
+			}
+			if (!$('#checkbox-7-4').is(':checked')) {
+				// do something
+				setGame4.click();
+			}
+			if (!$('#checkbox-7-5').is(':checked')) {
+				// do something
+				setGame5.click();
+			}
+			if (!$('#checkbox-7-6').is(':checked')) {
+				// do something
+				setGame6.click();
+			}
+			if (!$('#checkbox-7-7').is(':checked')) {
+				// do something
+				setGame7.click();
+			}
+			let id = document.getElementById('getId1').value;
+
+			let allR = rotate(grade3);
+
+			let name = new Array();
+			let range = 0;
+
+			for (i = 0; i < allR[0].length; i++) {
+				if (allR[0][i] == id) {
+					break;
+				}
+				range += 1;
+			}
+			for (var i = 0; i < allR.length; i++) {
+				if (allR[i][range].length != 0) {
+					name.push([allR[i][0], allR[i][range]])
+				}
+			}
+			// console.log(name);
+			set(name);
+			get(id);
+			setClassKQ(id);
+			setCY();
+			showtest()
+		});
+
+		setGame2.addEventListener("click", function() {
+
+			// 判断其他的按钮是否为未开启状态
+			if (!$('#checkbox-7-1').is(':checked')) {
+				// do something
+				setGame1.click();
+			}
+			if (!$('#checkbox-7-3').is(':checked')) {
+				// do something
+				setGame3.click();
+			}
+			if (!$('#checkbox-7-4').is(':checked')) {
+				// do something
+				setGame4.click();
+			}
+			if (!$('#checkbox-7-5').is(':checked')) {
+				// do something
+				setGame5.click();
+			}
+			if (!$('#checkbox-7-6').is(':checked')) {
+				// do something
+				setGame6.click();
+			}
+			if (!$('#checkbox-7-7').is(':checked')) {
+				// do something
+				setGame7.click();
+			}
+			let id = document.getElementById('getId1').value;
+
+			let allR = rotate(grade4);
+
+			let name = new Array();
+			let range = 0;
+			for (i = 0; i < allR[0].length; i++) {
+				if (allR[0][i] == id) {
+					break;
+				}
+				range += 1;
+			}
+			for (var i = 0; i < allR.length; i++) {
+				if (allR[i][range].length != 0) {
+					name.push([allR[i][0], allR[i][range]])
+				}
+			}
+			// console.log(name);
+			set(name);
+			get(id);
+			setClassKQ(id);
+			setCY();
+			showtest()
+
+		})
+
+		setGame3.addEventListener("click", function() {
+
+			// 判断其他的按钮是否为未开启状态
+			if (!$('#checkbox-7-1').is(':checked')) {
+				// do something
+				setGame1.click();
+			}
+			if (!$('#checkbox-7-2').is(':checked')) {
+				// do something
+				setGame2.click();
+			}
+			if (!$('#checkbox-7-4').is(':checked')) {
+				// do something
+				setGame4.click();
+			}
+			if (!$('#checkbox-7-5').is(':checked')) {
+				// do something
+				setGame5.click();
+			}
+			if (!$('#checkbox-7-6').is(':checked')) {
+				// do something
+				setGame6.click();
+			}
+			if (!$('#checkbox-7-7').is(':checked')) {
+				// do something
+				setGame7.click();
+			}
+			let id = document.getElementById('getId1').value;
+
+			let allR = rotate(grade5);
+
+			let name = new Array();
+			let range = 0;
+			for (i = 0; i < allR[0].length; i++) {
+				if (allR[0][i] == id) {
+					break;
+				}
+				range += 1;
+			}
+			for (var i = 0; i < allR.length; i++) {
+				if (allR[i][range].length != 0) {
+					name.push([allR[i][0], allR[i][range]])
+				}
+			}
+			// console.log(name);
+			set(name);
+			get(id);
+			setClassKQ(id);
+			setCY();
+			showtest()
+
+		})
+
+		setGame4.addEventListener("click", function() {
+
+			// 判断其他的按钮是否为未开启状态
+			if (!$('#checkbox-7-1').is(':checked')) {
+				// do something
+				setGame1.click();
+			}
+			if (!$('#checkbox-7-2').is(':checked')) {
+				// do something
+				setGame2.click();
+			}
+			if (!$('#checkbox-7-3').is(':checked')) {
+				// do something
+				setGame3.click();
+			}
+			if (!$('#checkbox-7-5').is(':checked')) {
+				// do something
+				setGame5.click();
+			}
+			if (!$('#checkbox-7-6').is(':checked')) {
+				// do something
+				setGame6.click();
+			}
+			if (!$('#checkbox-7-7').is(':checked')) {
+				// do something
+				setGame7.click();
+			}
+			let id = document.getElementById('getId1').value;
+
+			let allR = rotate(grade6);
+
+			let name = new Array();
+			let range = 0;
+			for (i = 0; i < allR[0].length; i++) {
+				if (allR[0][i] == id) {
+					break;
+				}
+				range += 1;
+			}
+			for (var i = 0; i < allR.length; i++) {
+				if (allR[i][range].length != 0) {
+					name.push([allR[i][0], allR[i][range]])
+				}
+			}
+			// console.log(name);
+			set(name);
+			get(id);
+			setClassKQ(id);
+			setCY();
+			showtest()
+		})
+
+		setGame5.addEventListener("click", function() {
+
+			// 判断其他的按钮是否为未开启状态
+			if (!$('#checkbox-7-1').is(':checked')) {
+				// do something
+				setGame1.click();
+			}
+			if (!$('#checkbox-7-2').is(':checked')) {
+				// do something
+				setGame2.click();
+			}
+			if (!$('#checkbox-7-3').is(':checked')) {
+				// do something
+				setGame3.click();
+			}
+			if (!$('#checkbox-7-4').is(':checked')) {
+				// do something
+				setGame4.click();
+			}
+			if (!$('#checkbox-7-6').is(':checked')) {
+				// do something
+				setGame6.click();
+			}
+			if (!$('#checkbox-7-7').is(':checked')) {
+				// do something
+				setGame7.click();
+			}
+			let id = document.getElementById('getId1').value;
+
+			let allR = rotate(grade7);
+
+			let name = new Array();
+			let range = 0;
+			for (i = 0; i < allR[0].length; i++) {
+				if (allR[0][i] == id) {
+					break;
+				}
+				range += 1;
+			}
+			for (var i = 0; i < allR.length; i++) {
+				if (allR[i][range].length != 0) {
+					name.push([allR[i][0], allR[i][range]])
+				}
+			}
+			// console.log(name);
+			set(name);
+			get(id);
+			setClassKQ(id);
+			setCY();
+			showtest()
+
+		})
+
+		setGame6.addEventListener("click", function() {
+
+			// 判断其他的按钮是否为未开启状态
+			if (!$('#checkbox-7-1').is(':checked')) {
+				// do something
+				setGame1.click();
+			}
+			if (!$('#checkbox-7-2').is(':checked')) {
+				// do something
+				setGame2.click();
+			}
+			if (!$('#checkbox-7-3').is(':checked')) {
+				// do something
+				setGame3.click();
+			}
+			if (!$('#checkbox-7-4').is(':checked')) {
+				// do something
+				setGame4.click();
+			}
+			if (!$('#checkbox-7-5').is(':checked')) {
+				// do something
+				setGame5.click();
+			}
+			if (!$('#checkbox-7-7').is(':checked')) {
+				// do something
+				setGame7.click();
+			}
+			let id = document.getElementById('getId1').value;
+
+			let allR = rotate(grade8);
+
+			let name = new Array();
+			let range = 0;
+			for (i = 0; i < allR[0].length; i++) {
+				if (allR[0][i] == id) {
+					break;
+				}
+				range += 1;
+			}
+			for (var i = 0; i < allR.length; i++) {
+				if (allR[i][range].length != 0) {
+					name.push([allR[i][0], allR[i][range]])
+				}
+			}
+			// console.log(name);
+			set(name);
+			get(id);
+			setClassKQ(id);
+			setCY();
+			showtest()
+		})
+
+		setGame7.addEventListener("click", function() {
+
+			// 判断其他的按钮是否为未开启状态
+			if (!$('#checkbox-7-1').is(':checked')) {
+				// do something
+				setGame1.click();
+			}
+			if (!$('#checkbox-7-2').is(':checked')) {
+				// do something
+				setGame2.click();
+			}
+			if (!$('#checkbox-7-3').is(':checked')) {
+				// do something
+				setGame3.click();
+			}
+			if (!$('#checkbox-7-4').is(':checked')) {
+				// do something
+				setGame4.click();
+			}
+			if (!$('#checkbox-7-5').is(':checked')) {
+				// do something
+				setGame5.click();
+			}
+			if (!$('#checkbox-7-6').is(':checked')) {
+				// do something
+				setGame6.click();
+			}
+			let id = document.getElementById('getId1').value;
+
+			let allR = rotate(all);
+
+			let name = new Array();
+			let range = 0;
+			for (i = 0; i < allR[0].length; i++) {
+				if (allR[0][i] == id) {
+					break;
+				}
+				range += 1;
+			}
+			for (var i = 0; i < allR.length; i++) {
+				if (allR[i][range].length != 0) {
+					name.push([allR[i][0], allR[i][range]])
+				}
+			}
+			// console.log(name);
+			set(name);
+			get(id);
+			setClassKQ(id);
+			setCY();
+			showtest()
+		})
+
+		// 翻转数列a
+		function rotate(arr) {
+			let exe = new Array();
+			for (var i = 0; i < arr[0].length; i++) {
+				exe[i] = new Array();
+			}
+			for (var i = 0; i < arr[0].length; i++) {
+				for (var j = 0; j < arr.length; j++) {
+					exe[i][j] = arr[j][i];
+				}
+			}
+			return exe
+		}
+		// console.log(all);
+		// allR = rotate(all);
+
+
+		//*****************************************************图一*******************************************		
+		// 设置雷达图
+		function set(array) {
+			var jiao = new Array();
+			var fen = new Array();
+
+			for (var i = 0; i < array.length; i++) {
+				if (array[i][0] != "id" && array[i][0] != "总计" && array[i][0] != "ID") {
+					if (array[i][0] == "语文" || array[i][0] == "数学" || array[i][0] == "英语") {
+						var a = {
+							name: array[i][0],
+							max: "150",
+						};
+					} else if (array[i][0] == "1B模块总分") {
+						var a = {
+							name: array[i][0],
+							max: "60",
+						};
+					} else {
+						var a = {
+							name: array[i][0],
+							max: "100",
+						};
+					}
+					jiao.push(a);
+					fen.push(array[i][1]);
+				}
+			}
+			// console.log(jiao);
+			var myChart2 = echarts.init(document.getElementById('gradeLeft'),'halloween');
+			var spOption = {
+				title: {
+					text: '个人成绩'
+				},
+				tooltip: {},
+				legend: {
+					data: ['平均成绩']
+				},
+				radar: {
+					// shape: 'circle',
+					name: {
+						textStyle: {
+							// color: '#fff',
+							// backgroundColor: '#999',
+							borderRadius: 3,
+							padding: [3, 5]
+						}
+					},
+					indicator: jiao,
+					// radius:,
+					axisLine: {
+						show: true,
+						// symbol:'arrow',
+						// 							color: '#333',
+						// showMinLabel: false
+					},
+					axisTick: {
+						show: true,
+					},
+					// 						axisLabel:{
+					// 							show:true,
+					// 						}
+				},
+				series: [{
+					name: '个人成绩',
+					type: 'radar',
+					// areaStyle: {normal: {}},
+					label: {
+						show: true,
+					},
+					data: [{
+						value: fen,
+						name: '平均成绩',
+						label: {
+							show: true,
+							fontWeight: 'bolder',
+							fontSize: 14,
+						}
+					}, ]
+				}]
+			};
+			myChart2.setOption(spOption);
+		}
+
+		//*****************************************************图二*******************************************		
+		// 设置平行坐标系
+		function get(id) {
+
+			testname = []; //考试名称数组
+			let subjectName = []; //考试课程数组
+			let gradeData = []; //成绩数组
+			let pa = []; //parallelAxis属性
+			let scheme = []; //坐标轴显示信息
+			let index = 0;
+			let num = 0;
+
+
+
+			for (var i = 0; i < gradeSelf.length; i++) {
+				if (gradeSelf[i][0] == id) {
+					num++;
+					addsub(gradeSelf[i][2]);
+					addtest(gradeSelf[i][1]);
+				} else if (gradeSelf[i][0] > id) {
+					break;
+				}
+			}
+			index = i - num;
+			maksch();
+			makgratedata();
+			makpa();
+			// console.log(gradeData);
+			// console.log(subjectName);
+			// console.log(pa);
+			// console.log(testname);
+			// console.log(pa);
+
+			var myChart3 = echarts.init(document.getElementById('gradeRight'),'halloween');
+			myChart3.dispose();
+			var myChart3 = echarts.init(document.getElementById('gradeRight'),'halloween');
+
+
+			var SelfOption = {
+				title: {
+					text: "学生往期成绩展示",
+					top: 1,
+					left: "center",
+					textStyle: {
+						// color: '#292421'
+					}
+				},
+				animation: false,
+				visualMap: {
+					type: 'piecewise',
+					categories: subjectName,
+					// dimension: CATEGORY_DIM,
+					orient: 'vertical',
+					top: "center",
+					left: 0,
+					textStyle :{
+						color:"#999999"
+					},
+					inRange: {
+						color: ['#c23531', '#2f4554', '#61a0a8', '#c25555', '#2f3564', '#614828', '#c26847', '#581444', '#234675',
+							'#816452', '#273649', '#562287'
+						]
+					},
+					outOfRange: {
+						color: '#ddd'
+					},
+					seriesIndex: [0]
+				},
+				tooltip: {
+					trigger: 'axis'
+				},
+				parallelAxis: pa,
+
+				parallel: {
+					// bottom: '5%',
+					// left: '5%',
+					height: '40%',
+					width: 'auto',
+					// axisExpandable: true,
+					axisExpandCenter: 15,
+					axisExpandCount: 10,
+					axisExpandWidth: 60,
+					parallelAxisDefault: {
+						type: 'value',
+						name: 'AQI指数',
+						nameLocation: 'start',
+						nameRotate: 90,
+						nameGap: 20,
+						splitNumber: 3,
+						silent: true, //坐标轴是否是静态无法交互
+						triggerEvent: true, //坐标轴的标签是否响应和触发鼠标事件
+						nameTextStyle: {
+							fontSize: 14
+						},
+						// axisLine: {
+						// 	lineStyle: {
+						// 		color: '#555',
+						// 	}
+						// },
+						// axisTick: {
+						// 	lineStyle: {
+						// 		color: '#555',
+						// 	}
+						// },
+						splitLine: {
+							show: false
+						},
+						axisLabel: {
+							textStyle: {
+								// color: '#555'
+							}
+						}
+					}
+				},
+				grid: [],
+				xAxis: [],
+				yAxis: [],
+				series: [{
+					name: 'parallel',
+					type: 'parallel',
+					smooth: true,
+					lineStyle: {
+						normal: {
+							width: 0.4,
+							opacity: 0.9
+						}
+					},
+					data: gradeData,
+				}]
+			};
+			myChart3.setOption(SelfOption);
+
+
+
+			function addsub(s) { //构造科目数组
+				for (j = 0; j < subjectName.length; j++) {
+					if (subjectName[j] == s) {
+						return;
+					}
+				}
+				subjectName.push(s);
+			}
+
+			function addtest(s) { //构造考试名数组
+				for (j = 0; j < testname.length; j++) {
+					if (testname[j] == s) {
+						return;
+					}
+				}
+				testname.push(s);
+			}
+
+			function maksch() { //构造//scheme数组
+				for (i = 0; i < testname.length; i++) {
+					scheme.push({
+						name: testname[i],
+						index: 1,
+						text: testname[i]
+					}, )
+				}
+			}
+
+			function makgratedata() { //构造gd数组
+				for (i = 0; i < subjectName.length; i++) {
+					gradeData[i] = new Array();
+					for (j = 0; j < testname.length; j++) {
+						gradeData[i][j] = 0;
+					}
+					gradeData[i][testname.length] = subjectName[i];
+				}
+				for (i = index; i < index + num; i++) {
+					gradeData[subjectName.indexOf(gradeSelf[i][2])][testname.indexOf(gradeSelf[i][1])] = gradeSelf[i][3]
+				}
+			}
+
+			function makpa() { //构造pa数组
+				for (i = 0; i < scheme.length; i++) {
+					pa.push({
+						dim: i,
+						name: scheme[i].text,
+						max: 150,
+						triggerEvent: true
+					});
+				}
+			}
+
+		}
+
+		//*****************************************************图三*******************************************			
+
+		// 班级显示违纪热力图
+		function setClassKQ(id) {
+
+			// 			$.ajax({
+			// 				url: '../json/classBreak.json',
+			// 				async: false,
+			// 				success: function(data) {
+			// 					classBreak = data;
+			// 				}
+			// 			});
+			// 			$.ajax({
+			// 				url: '../json/personBreak.json',
+			// 				async: false,
+			// 				success: function(data) {
+			// 					personBreak = data;
+			// 				}
+			// 			});
+			// 
+			let breakData = [];
+			let date = [];
+			let see = [];
+			// 判断得到的id是学生类型还是班级类型,并给breakDate赋值
+			if (id <= 1000) {
+				for (i = 0; i < classBreak.length; i++) {
+					if (classBreak[i][0] == id) {
+						breakData.push([classBreak[i][1], classBreak[i][2]])
+					}
+				}
+			} else {
+				let exe = []
+				for (i = 0; i < personBreak.length; i++) {
+					if (personBreak[i][0] == id) {
+						exe.push([personBreak[i][2], 0])
+					}
+				}
+				unique1(exe);
+				for (i = 0; i < personBreak.length; i++) {
+					for (j = 0; j < exe.length; j++) {
+						if (personBreak[i][0] == id && personBreak[i][2] == exe[j][0]) {
+							exe[j][1] += 1;
+						}
+					}
+				}
+				for (i = 0; i < exe.length; i++) {
+					breakData.push([exe[i][0], exe[i][1]]);
+				}
+
+			}
+			// let a = {range: '2019',cellSize: ['auto', 20]};
+
+			let amount = [
+				[2014, 0],
+				[2015, 0],
+				[2016, 0],
+				[2017, 0],
+				[2018, 0],
+				[2019, 0]
+			];
+			// console.log(breakData);
+
+			// 判断学生违纪日期分布
+			for (i = 0; i < breakData.length; i++) {
+				if (breakData[i][0].search(2019) != -1) {
+					amount[5][1] += 1;
+				} else if (breakData[i][0].search(2018) != -1) {
+					amount[4][1] += 1;
+				} else if (breakData[i][0].search(2017) != -1) {
+					amount[3][1] += 1;
+				} else if (breakData[i][0].search(2016) != -1) {
+					amount[2][1] += 1;
+				} else if (breakData[i][0].search(2015) != -1) {
+					amount[1][1] += 1;
+				} else if (breakData[i][0].search(2014) != -1) {
+					amount[0][1] += 1;
+				}
+			}
+			// console.log(breakData);
+			for (i = 0; i < amount.length; i++) {
+				if (amount[i][1] > 0) {
+					date.push({
+						range: amount[i][0],
+						cellSize: ['auto', 20]
+					})
+				}
+			}
+
+			// console.log(date);
+
+
+			// 学生展示图
+			for (i = 0; i < date.length; i++) {
+				date[i].top = i * 160 + 100;
+				see.push({
+					type: 'heatmap',
+					coordinateSystem: 'calendar',
+					calendarIndex: i,
+					data: breakData,
+				})
+			}
+
+			// console.log(breakData);
+			DateOption = {
+				title: {
+					top: 10,
+					left: 'center',
+					text: '班级违纪情况'
+				},
+				tooltip: {
+					formatter: function(info) {
+						// console.log(info);
+						let data = info.data[0] + "\n违纪次数：" + info.data[1] + "次";
+						return data
+					}
+				},
+				visualMap: {
+					min: 0,
+					max: 38,
+					type: 'piecewise',
+					orient: 'horizontal',
+					left: 'center',
+					top: 65,
+					textStyle: {
+						color: '#FFF'
+					}
+				},
+				calendar: date,
+				series: see,
+			};
+
+			myChart2 = echarts.init(document.getElementById('kaoqin'),'halloween');
+			myChart2.setOption(DateOption, true);
+			// 数组去重
+			function unique1(arr) {
+				var hash = [];
+				for (var i = 0; i < arr.length; i++) {
+					if (hash.indexOf(arr[i]) == -1) {
+						hash.push(arr[i]);
+					}
+				}
+				return hash;
+			}
+		}
+
+		//*****************************************************图四*******************************************	
+		// 显示个人的排名成绩
+		function setPaiming(id, time) {
+			// 排名加考试科目的数组
+			var Pm = [];
+			let OptionData = [];
+			// 			console.log(paiMing);
+			// 			console.log(id);
+
+			for (i = 0; i < paiMing.length; i++) {
+				// console.log(paiMing[i][0]);
+				if (id == paiMing[i][2] && time == paiMing[i][0]) {
+					// console.log(paiMing[i][0]);
+					Pm.push([paiMing[i][1], paiMing[i][3]])
+				}
+			}
+			// console.log(Pm);
+			var myPM = document.getElementById('paiming');
+			var myData = "<p>考试排名：</p>"
+			// console.log(myData)
+			for (i = 0; i < Pm.length; i++) {
+				myData += "<p>" + Pm[i][0] + ":" + Pm[i][1] + '名</p>';
+
+			}
+			
+			myPM.innerHTML = myData;
+			// console.log(myData);
+		}
+
+		function showtest() {
+			console.log(testname)
+			var obj = document.getElementById('testselect');
+			obj.options.length = 0;
+			for (i = 0; i < testname.length; i++) {
+				obj.add(new Option(testname[i], i))
+			}
+			dip();
+		}
+
+		function dip() {
+			var obj = document.getElementById('testselect');
+			var id = document.getElementById('getId1').value
+			var time = obj.value;
+			console.log(obj)
+			// 	testsub = [];
+			// 	sery = [];
+			// 
+			setPaiming(id, testname[time])
+		}
+
+
+		//*****************************************************图五*******************************************	
+
+		function setCY() {
+			var fill = d3.scale.category20();
+
+			var cyData = new Array();
+			cyData = ["离校", "迟到", "早退", "离校", "进校", "操场考勤", "校服"]
+			document.getElementById('ciyun').innerHTML = ""
+			// hello.remove()
+
+			// var a=new Array();
+			// for(i)
+			var layout = d3.layout.cloud()
+				.size([300, 700])
+				//在这里添加该学生的词云图具体内容
+				.words(cyData.map(function(d) {
+					return {
+						text: d,
+						size: 10 + Math.random() * 90
+					};
+				}))
+				.padding(5)
+				.rotate(function() {
+					return ~~(Math.random() * 2) * 90;
+				})
+				.font("Impact")
+				.fontSize(function(d) {
+					return d.size;
+				})
+				.on("end", draw);
+
+			layout.start();
+
+			function draw(words) {
+				// d3.select("#ciyun").remove();
+
+
+				d3.select("#ciyun").append("svg")
+					.attr("width", layout.size()[0])
+					.attr("height", layout.size()[1])
+					.append("g")
+					.attr("transform", "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")")
+					.selectAll("text")
+					.data(words)
+					.enter().append("text")
+					.style("font-size", function(d) {
+						return d.size + "px";
+					})
+					.style("font-family", "Impact")
+					.style("fill", function(d, i) {
+						return fill(i);
+					})
+					.attr("text-anchor", "middle")
+					.attr("transform", function(d) {
+						return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+					})
+					.text(function(d) {
+						return d.text;
+					});
+			}
+
+
+		}
+	</script>
+
+</html>

@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Icons - Ready Bootstrap Dashboard</title>
+		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+		<link rel="stylesheet" href="assets/css/ready.css">
+		<link rel="stylesheet" href="assets/css/demo.css">
+		<style type="text/css">
+			.wrapper {
+				min-height: 100vh;
+				position: relative;
+				top: 0;
+				height: 100vh;
+				background-image: url(../../01.jpeg);
+				background-position-x: left;
+				background-position-y: top;
+				background-size: initial;
+				background-repeat-x: no-repeat;
+				background-repeat-y: no-repeat;
+				background-attachment: initial;
+				background-origin: initial;
+				background-clip: initial;
+				background-color: initial;
+			}
+
+			a {
+				color: #000000;
+			}
+
+			.tree {
+				margin: 0;
+				padding: 0;
+				padding-top: 54px;
+				background-color: #FFFFFF;
+				overflow: hidden;
+			}
+
+			/*隐藏input*/
+			.tree li input {
+				position: absolute;
+				left: 0;
+				opacity: 0;
+				z-index: 2;
+				cursor: pointer;
+				height: 1em;
+				width: 1em;
+				top: 0;
+			}
+
+			/*所有菜单项设置统一样式*/
+			.tree li {
+				position: relative;
+				list-style: none;
+			}
+
+			/*一级菜单加下边线*/
+			.tree>li {
+				border-bottom: 1px solid #d9d9d9;
+			}
+
+			/*给有子菜单的菜单项添加背景图标*/
+			.tree li label {
+				max-width: 999px;
+				cursor: pointer;
+				display: block;
+				margin: 0 0 0 -50px;
+				padding: 15px 10px 15px 70px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+
+			.tree li label:hover,
+			li label:focus {
+				background-color: #f2f2f2;
+				color: #fff;
+			}
+
+			/*清除所有展开的子菜单的display*/
+			.tree li input+ol {
+				display: none;
+			}
+
+			/*当input被选中时，给所有展开的子菜单设置样式*/
+			.tree input:checked+ol {
+				padding-left: 14px;
+				height: auto;
+				display: block;
+			}
+
+			.tree input:checked+ol>li {
+				height: auto;
+			}
+
+			/*末层菜单为A标签，设置样式*/
+			.tree li.file a {
+				margin: 0 -10px 0 -50px;
+				padding: 15px 20px 15px 70px;
+				text-decoration: none;
+				display: block;
+				color: #333333;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+
+			.tree li.file a:hover,
+			li.file a:focus {
+				background-color: #f2f2f2;
+				color: #fff;
+			}
+
+			/*不同层级的菜单字体大小不同*/
+			.tree .folderOne {
+				font-size: 18px;
+			}
+
+			.tree .folderTwo {
+				font-size: 16px;
+			}
+
+			/* .tree .folderThree{font-size:14px;} */
+		</style>
+
+	</head>
+	<body>
+		<!-- 页面整体 -->
+		<div class="wrapper">
+			<!-- 上部导航栏 -->
+			<div class="main-header" style="background-color: #454545;">
+				<div class="logo-header" style="color: #FFFFFF;">
+					<!-- <a href="index.html" class="logo" > -->
+						成绩分析可视化系统
+					<!-- </a> -->
+					<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse"
+					 aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<button class="topbar-toggler more"><i class="la la-ellipsis-v"></i></button>
+				</div>
+				<nav class="navbar navbar-header navbar-expand-lg">
+					<div class="container-fluid">
+
+						<!-- 搜索框 -->
+						<!-- <form class="navbar-left navbar-form nav-search mr-md-3" action="">
+							<div class="input-group">
+								<input type="text" placeholder="Search ..." class="form-control">
+								<div class="input-group-append">
+									<span class="input-group-text">
+										<i class="la la-search search-icon"></i>
+									</span>
+								</div>
+							</div>
+						</form> -->
+						<!-- 右上角的人物头像 -->
+						<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+
+						</ul>
+					</div>
+				</nav>
+			</div>
+
+			<!-- 左部导航栏 -->
+			<div class="sidebar" style="background-color: #454545;">
+				<ol class="tree" style="background-color: #454545;">
+					<li>
+						<label for="folder5" class="folderOne"><a href="map.html" style="color: #ffffff;">地图分布</a></label> <input type="checkbox" id="folder5" />
+						<!-- 				        <ol>  
+								            <li class="file folderTwo"><a href="#">实时数据</a></li> 
+								            <li class="file folderTwo"><a href="#">实时数据</a></li> 
+								        </ol>  -->
+					</li>
+					<li>
+						<label for="folder3" class="folderOne" ><span style="color: #ffffff;">个人</span></label> <input type="checkbox" id="folder3" style="color: #ffffff;"/>
+						<ol>
+							<li class="file folderTwo"><a href="xiaofei.html" style="color: #ffffff;">消费情况</a></li>
+							<li class="file folderTwo"><a href="student-grade2.html" style="color: #ffffff;">分数</a></li>
+						</ol>
+					</li>
+					<li>
+						<label for="folder4" class="folderOne" href="classGrade.html"><a href="classGrade.html" style="color: #ffffff;">班级</a></label> <input
+						 type="checkbox" id="folder4" />
+						<!-- 				        <ol>  
+								            <li class="file folderTwo"><a href="#">班级成绩</a></li> 
+								            <li class="file folderTwo"><a href="#">实时数据</a></li> 
+								        </ol>  -->
+					</li>
+				</ol>
+			</div>
+
+
+			<!-- 主要内容 -->
+			<div class="main-panel" style="background:url(../img/pumpkin.png);">
+				<div class="content">
+					<div style="display: flex;flex-direction: row;justify-content:space-around; min-width: 1600px; vertical-align: bottom; height: 860px;">
+
+						
+						<div style="color: #333;">
+							<div id="mapLeft" style="width: 500px; height: 500px;display: inline-block;">
+							
+							</div>
+						</div>
+
+						<div id="mapRight" style="width: 500px; height: 500px;display: inline-block;">
+
+						</div>
+						<div id="mapDown" style="width: 500px; height: 500px;display: inline-block;">
+
+						</div>
+					</div>
+
+
+
+
+				</div>
+
+			</div>
+		</div>
+		<!-- Modal -->
+		<!-- <div class="modal fade" id="modalUpdate" tabindex="-1" role="dialog" aria-labelledby="modalUpdatePro" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header bg-primary">
+						<h6 class="modal-title"><i class="la la-frown-o"></i> Under Development</h6>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body text-center">
+						<p>Currently the pro version of the <b>Ready Dashboard</b> Bootstrap is in progress development</p>
+						<p>
+							<b>We'll let you know when it's done</b></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div> -->
+	</body>
+
+
+
+	<!-- 它的 -->
+	<script src="assets/js/core/jquery.3.2.1.min.js"></script>
+	<script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="assets/js/core/popper.min.js"></script>
+	<script src="assets/js/core/bootstrap.min.js"></script>
+	<script src="assets/js/plugin/chartist/chartist.min.js"></script>
+	<script src="assets/js/plugin/chartist/plugin/chartist-plugin-tooltip.min.js"></script>
+	<script src="assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+	<script src="assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+	<script src="assets/js/plugin/jquery-mapael/jquery.mapael.min.js"></script>
+	<script src="assets/js/plugin/jquery-mapael/maps/world_countries.min.js"></script>
+	<script src="assets/js/plugin/chart-circle/circles.min.js"></script>
+	<script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+	<script src="assets/js/ready.min.js"></script>
+	<script type="text/javascript">
+		var iconClass = ['la-500px', 'la-adjust', 'la-adn', 'la-align-center', 'la-align-justify',
+			'la-align-left', 'la-align-right', 'la-amazon', 'la-ambulance', 'la-anchor', 'la-android', 'la-angellist',
+			'la-angle-double-down', 'la-angle-double-left', 'la-angle-double-right', 'la-angle-double-up', 'la-angle-down',
+			'la-angle-left', 'la-angle-right', 'la-angle-up', 'la-apple', 'la-archive', 'la-area-chart',
+			' la-arrow-circle-down', 'la-arrow-circle-left', 'la-arrow-circle-o-down', 'la-arrow-circle-o-left',
+			'la-arrow-circle-o-right', 'la-arrow-circle-o-up', 'la-arrow-circle-right', 'la-arrow-circle-up', 'la-arrow-down',
+			'la-arrow-left', 'la-arrow-right', 'la-arrow-up', 'la-arrows', 'la-arrows-alt', 'la-arrows-h', 'la-arrows-v',
+			'la-asterisk', 'la-at', 'la-automobile', 'la-backward', 'la-balance-scale', 'la-ban', 'la-bank', 'la-bar-chart',
+			'la-bar-chart-o', 'la-barcode', 'la-bars', 'la-battery-0', 'la-battery-1', 'la-battery-2', 'la-battery-3',
+			'la-battery-4', 'la-battery-empty', 'la-battery-full', 'la-battery-half', 'la-battery-quarter',
+			'la-battery-three-quarters', 'la-bed', 'la-beer', 'la-behance', 'la-behance-square', 'la-bell', 'la-bell-o',
+			'la-bell-slash', 'la-bell-slash-o', 'la-bicycle', 'la-binoculars', 'la-birthday-cake', 'la-bitbucket',
+			'la-bitbucket-square', 'la-bitcoin', 'la-black-tie', 'la-bold', 'la-bolt', 'la-bomb', 'la-book', 'la-bookmark',
+			'la-bookmark-o', 'la-briefcase', 'la-btc', 'la-bug', 'la-building', 'la-building-o', 'la-bullhorn', 'la-bullseye',
+			'la-bus', 'la-buysellads', 'la-cab', 'la-calculator', 'la-calendar', 'la-calendar-check-o', 'la-calendar-minus-o',
+			'la-calendar-o', 'la-calendar-plus-o', 'la-calendar-times-o', 'la-camera', 'la-camera-retro', 'la-car',
+			'la-caret-down', 'la-caret-left', 'la-caret-right', 'la-caret-square-o-down', 'la-toggle-down',
+			'la-caret-square-o-left', 'la-toggle-left', 'la-caret-square-o-right', 'la-toggle-right', 'la-caret-square-o-up',
+			'la-toggle-up', 'la-caret-up', 'la-cart-arrow-down', 'la-cart-plus', 'la-cc', 'la-cc-amex', 'la-cc-diners-club',
+			'la-cc-discover', 'la-cc-jcb', 'la-cc-mastercard', 'la-cc-paypal', 'la-cc-stripe', 'la-cc-visa', 'la-certificate',
+			'la-chain', 'la-chain-broken', 'la-check', 'la-check-circle', 'la-check-circle-o', 'la-check-square',
+			'la-check-square-o', 'la-chevron-circle-down', 'la-chevron-circle-left', 'la-chevron-circle-right',
+			'la-chevron-circle-up', 'la-chevron-down', 'la-chevron-left', 'la-chevron-right', 'la-chevron-up', 'la-child',
+			'la-chrome', 'la-circle', 'la-circle-o', 'la-circle-o-notch', 'la-circle-thin', 'la-clipboard', 'la-clock-o',
+			'la-clone', 'la-close', 'la-cloud', 'la-cloud-download', 'la-cloud-upload', 'la-cny', 'la-code', 'la-code-fork',
+			'la-codepen', 'la-coffee', 'la-cog', 'la-cogs', 'la-columns', 'la-comment', 'la-comment-o', 'la-commenting',
+			'la-commenting-o', 'la-comments', 'la-comments-o', 'la-compass', 'la-compress', 'la-connectdevelop', 'la-contao',
+			'la-copy', 'la-copyright', 'la-creative-commons', 'la-credit-card', 'la-crop', 'la-crosshairs', 'la-css3',
+			'la-cube', 'la-cubes', 'la-cut', 'la-cutlery', 'la-dashboard', 'la-dashcube', 'la-database', 'la-dedent',
+			'la-delicious', 'la-desktop', 'la-deviantart', 'la-diamond', 'la-digg', 'la-dollar', 'la-dot-circle-o',
+			'la-download', 'la-dribbble', 'la-dropbox', 'la-drupal', 'la-edit', 'la-eject', 'la-ellipsis-h', 'la-ellipsis-v',
+			'la-empire', 'la-ge', 'la-envelope', 'la-envelope-o', 'la-envelope-square', 'la-eraser', 'la-eur', 'la-euro',
+			'la-exchange', 'la-exclamation', 'la-exclamation-circle', 'la-exclamation-triangle', 'la-expand', 'la-expeditedssl',
+			'la-external-link', 'la-external-link-square', 'la-eye', 'la-eye-slash', 'la-eyedropper', 'la-facebook',
+			'la-facebook-f', 'la-facebook-official', 'la-facebook-square', 'la-fast-backward', 'la-fast-forward', 'la-fax',
+			'la-female', 'la-fighter-jet', 'la-file', 'la-file-archive-o', 'la-file-audio-o', 'la-file-code-o',
+			'la-file-excel-o', 'la-file-image-o', 'la-file-movie-o', 'la-file-o', 'la-file-pdf-o', 'la-file-photo-o',
+			'la-file-picture-o', 'la-file-powerpoint-o', 'la-file-sound-o', 'la-file-text', 'la-file-text-o', 'la-file-video-o',
+			'la-file-word-o', 'la-file-zip-o', 'la-files-o', 'la-film', 'la-filter', 'la-fire', 'la-fire-extinguisher',
+			'la-firefox', 'la-flag', 'la-flag-checkered', 'la-flag-o', 'la-flash', 'la-flask', 'la-flickr', 'la-floppy-o',
+			'la-folder', 'la-folder-o', 'la-folder-open', 'la-folder-open-o', 'la-font', 'la-fonticons', 'la-forumbee',
+			'la-forward', 'la-foursquare', 'la-frown-o', 'la-futbol-o', 'la-soccer-ball-o', 'la-gamepad', 'la-gavel', 'la-gbp',
+			'la-gear', 'la-gears', 'la-genderless', 'la-get-pocket', 'la-gg', 'la-gg-circle', 'la-gift', 'la-git',
+			'la-git-square', 'la-github', 'la-github-alt', 'la-github-square', 'la-glass', 'la-globe', 'la-google',
+			'la-google-plus', 'la-google-plus-square', 'la-google-wallet', 'la-graduation-cap', 'la-gratipay', 'la-gittip',
+			'la-group', 'la-h-square', 'la-hacker-news', 'la-hand-grab-o', 'la-hand-lizard-o', 'la-hand-o-down',
+			'la-hand-o-left', 'la-hand-o-right', 'la-hand-o-up', 'la-hand-paper-o', 'la-hand-peace-o', 'la-hand-pointer-o',
+			'la-hand-rock-o', 'la-hand-scissors-o', 'la-hand-spock-o', 'la-hand-stop-o', 'la-hdd-o', 'la-header',
+			'la-headphones', 'la-heart', 'la-heart-o', 'la-heartbeat', 'la-history', 'la-home', 'la-hospital-o', 'la-hotel',
+			'la-hourglass', 'la-hourglass-1', 'la-hourglass-2', 'la-hourglass-3', 'la-hourglass-end', 'la-hourglass-half',
+			'la-hourglass-o', 'la-hourglass-start', 'la-houzz', 'la-html5', 'la-i-cursor', 'la-ils', 'la-image', 'la-inbox',
+			'la-indent', 'la-industry', 'la-info', 'la-info-circle', 'la-inr', 'la-instagram', 'la-institution',
+			'la-internet-explorer', 'la-ioxhost', 'la-italic', 'la-joomla', 'la-jpy', 'la-jsfiddle', 'la-key', 'la-keyboard-o',
+			'la-krw', 'la-language', 'la-laptop', 'la-lastfm', 'la-lastfm-square', 'la-leaf', 'la-leanpub', 'la-legal',
+			'la-lemon-o', 'la-level-down', 'la-level-up', 'la-life-bouy', 'la-life-buoy', 'la-life-ring', 'la-support',
+			'la-life-saver', 'la-lightbulb-o', 'la-line-chart', 'la-link', 'la-linkedin', 'la-linkedin-square', 'la-linux',
+			'la-list', 'la-list-alt', 'la-list-ol', 'la-list-ul', 'la-location-arrow', 'la-lock', 'la-long-arrow-down',
+			'la-long-arrow-left', 'la-long-arrow-right', 'la-long-arrow-up', 'la-magic', 'la-magnet', 'la-mail-forward',
+			'la-mail-reply', 'la-mail-reply-all', 'la-male', 'la-map', 'la-map-marker', 'la-map-o', 'la-map-pin',
+			'la-map-signs', 'la-mars', 'la-mars-stroke-v', 'la-maxcdn', 'la-meanpath', 'la-medium', 'la-medkit', 'la-meh-o',
+			'la-mercury', 'la-microphone', 'la-microphone-slash', 'la-minus', 'la-minus-circle', 'la-minus-square',
+			'la-minus-square-o', 'la-mobile', 'la-mobile-phone', 'la-money', 'la-moon-o', 'la-mortar-board', 'la-motorcycle',
+			'la-mouse-pointer', 'la-music', 'la-navicon', 'la-neuter', 'la-newspaper-o', 'la-object-group', 'la-object-ungroup',
+			'la-odnoklassniki', 'la-odnoklassniki-square', 'la-opencart', 'la-openid', 'la-opera', 'la-optin-monster',
+			'la-outdent', 'la-pagelines', 'la-paint-brush', 'la-paper-plane', 'la-send', 'la-paper-plane-o', 'la-send-o',
+			'la-paperclip', 'la-paragraph', 'la-paste', 'la-pause', 'la-paw', 'la-paypal', 'la-pencil', 'la-pencil-square',
+			'la-pencil-square-o', 'la-phone', 'la-phone-square', 'la-photo', 'la-picture-o', 'la-pie-chart', 'la-pied-piper',
+			'la-pied-piper-alt', 'la-pinterest', 'la-pinterest-p', 'la-pinterest-square', 'la-plane', 'la-play',
+			'la-play-circle', 'la-play-circle-o', 'la-plug', 'la-plus', 'la-plus-circle', 'la-plus-square', 'la-plus-square-o',
+			'la-power-off', 'la-print', 'la-puzzle-piece', 'la-qq', 'la-qrcode', 'la-question', 'la-question-circle',
+			'la-quote-left', 'la-quote-right', 'la-ra', 'la-random', 'la-rebel', 'la-recycle', 'la-reddit', 'la-reddit-square',
+			'la-refresh', 'la-registered', 'la-renren', 'la-reorder', 'la-repeat', 'la-reply', 'la-reply-all', 'la-retweet',
+			'la-rmb', 'la-road', 'la-rocket', 'la-rotate-left', 'la-rotate-right', 'la-rouble', 'la-rss', 'la-feed',
+			'la-rss-square', 'la-rub', 'la-ruble', 'la-rupee', 'la-safari', 'la-save', 'la-scissors', 'la-search',
+			'la-search-minus', 'la-search-plus', 'la-sellsy', 'la-server', 'la-share', 'la-share-alt', 'la-share-alt-square',
+			'la-share-square', 'la-share-square-o', 'la-shekel', 'la-sheqel', 'la-shield', 'la-ship', 'la-shirtsinbulk',
+			'la-shopping-cart', 'la-sign-in', 'la-sign-out', 'la-signal', 'la-simplybuilt', 'la-sitemap', 'la-skyatlas',
+			'la-skype', 'la-slack', 'la-sliders', 'la-slideshare', 'la-smile-o', 'la-sort', 'la-unsorted', 'la-sort-alpha-asc',
+			'la-sort-alpha-desc', 'la-sort-amount-asc', 'la-sort-amount-desc', 'la-sort-asc', 'la-sort-up', 'la-sort-desc',
+			'la-sort-down', 'la-sort-numeric-asc', 'la-sort-numeric-desc', 'la-soundcloud', 'la-space-shuttle', 'la-spinner',
+			'la-spoon', 'la-spotify', 'la-square', 'la-square-o', 'la-stack-exchange', 'la-stack-overflow', 'la-star',
+			'la-star-half', 'la-star-half-o', 'la-star-half-full', 'la-star-half-empty', 'la-star-o', 'la-steam',
+			'la-steam-square', 'la-step-backward', 'la-step-forward', 'la-stethoscope', 'la-sticky-note', 'la-sticky-note-o',
+			'la-stop', 'la-street-view', 'la-strikethrough', 'la-stumbleupon', 'la-stumbleupon-circle', 'la-subscript',
+			'la-subway', 'la-suitcase', 'la-sun-o', 'la-superscript', 'la-table', 'la-tablet', 'la-tachometer', 'la-tag',
+			'la-tags', 'la-tasks', 'la-taxi', 'la-television', 'la-tv', 'la-tencent-weibo', 'la-terminal', 'la-text-height',
+			'la-text-width', 'la-th', 'la-th-large', 'la-th-list', 'la-thumb-tack', 'la-thumbs-down', 'la-thumbs-o-down',
+			'la-thumbs-o-up', 'la-thumbs-up', 'la-ticket', 'la-times', 'la-remove', 'la-times-circle', 'la-times-circle-o',
+			'la-tint', 'la-toggle-off', 'la-toggle-on', 'la-trademark', 'la-train', 'la-trash', 'la-trash-o', 'la-tree',
+			'la-trello', 'la-tripadvisor', 'la-trophy', 'la-truck', 'la-try', 'la-tty', 'la-tumblr', 'la-tumblr-square',
+			'la-turkish-lira', 'la-twitch', 'la-twitter', 'la-twitter-square', 'la-umbrella', 'la-underline', 'la-undo',
+			'la-university', 'la-unlink', 'la-unlock', 'la-unlock-alt', 'la-upload', 'la-usd', 'la-user', 'la-user-md',
+			'la-user-plus', 'la-user-secret', 'la-user-times', 'la-users', 'la-venus', 'la-venus-double', 'la-venus-mars',
+			'la-viacoin', 'la-video-camera', 'la-vimeo',
+			'la-vimeo-square la-vine la-vk la-volume-down la-volume-off la-volume-up la-warning la-wechat', 'la-weibo',
+			'la-weixin', 'la-whatsapp', 'la-wheelchair', 'la-wifi', 'la-wikipedia-w', 'la-windows', 'la-won', 'la-wordpress',
+			'la-wrench', 'la-xing', 'la-xing-square', 'la-y-combinator', 'la-y-combinator-square', 'la-yahoo', 'la-yc',
+			'la-yc-square', 'la-yelp', 'la-yen', 'la-youtube', 'la-youtube-play', 'la-youtube-square'
+		];
+		var rowDemoIcon = "#row-demo-icon";
+		for (i = 0; i < iconClass.length; i++) {
+			$(rowDemoIcon).append('<div class="col-md-3"> <div class="demo-icon"> <div class="icon-preview"><i class="la ' +
+				iconClass[i] + '"></i></div> <div class="icon-class">la ' + iconClass[i] + '</div> </div> </div>');
+		}
+	</script>
+
+	<!-- 我的 -->
+	<script type="text/javascript" src="../js/echarts.min.js"></script>
+	<script type="text/javascript" src="../js/china.js"></script>
+	<script src="../ourJs/map.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/halloween.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var all = new Array();
+
+
+
+
+
+		// 翻转数列a到all
+		for (var i = 0; i < a[i].length; i++) {
+			all[i] = new Array();
+			for (var j = 0; j < a.length; j++) {
+				all[i][j] = a[j][i];
+			}
+		}
+
+		// 定义省份数量值
+		var province = new Dictionary();
+		var provinceData = new Dictionary();
+
+
+		//得到各个省份的数据
+		for (var i = 1; i < a.length; i++) {
+			provinceData.add(a[i][2], 0);
+		};
+		// province = unique1(province);
+		// console.log(provinceData);
+		// console.log(province);
+
+		for (var i = 1; i < a.length; i++) {
+			provinceData.find(a[i][2]);
+		};
+
+		var optionMap = {
+			// backgroundColor: '#F2F3F8',
+			title: {
+				text: '该校学生地域分布图',
+				subtext: '数据来自于比赛',
+				x: 'center'
+			},
+			tooltip: {
+				trigger: 'item',
+				transitionDuration: 1,
+				showDelay: 50,
+				hideDelay: 0,
+				formatter: function(params) {
+					// console.log(params);
+					if (params.data != undefined) {
+						var res = '<div><p>学生数量</p><p>' + params.name + ':' + params.data.value + '</p></div>';
+					} else {
+						var res = '<div><p>学生数量</p><p>' + params.name + ':0</p></div>';
+					}
+					triggerOn: 'click';
+					return res;
+				},
+			},
+
+			//左侧小导航图标
+			visualMap: {
+				show: true,
+				x: 'left',
+				y: 'center',
+				splitList: [{
+						start: 51,
+						end: 2000
+					}, {
+						start: 31,
+						end: 50
+					},
+					{
+						start: 11,
+						end: 30
+					}, {
+						start: 6,
+						end: 10
+					},
+					{
+						start: 1,
+						end: 5
+					}, {
+						start: 0,
+						end: 0
+					},
+				],
+				textStyle :{
+					color:"#999999"
+				},
+				// color: ['#045D85', '#0087B6', '#03A2E3', '#43BDEE', '#96D6FA', '#D6EFF6'],
+				// color: ['#CDCFCD', '#C5E7C5', '#A1EAA1','#73E773', '#34D834', '#02FA02'] 
+			},
+
+			//配置属性
+			series: [{
+				name: '学生数量',
+				type: 'map',
+				mapType: 'china',
+				roam: true,
+				label: {
+					normal: {
+						show: true //省份名称  
+					},
+					emphasis: {
+						show: false
+					}
+				},
+				data: provinceData.show(), //数据
+			}]
+		};
+		//初始化echarts实例
+		var myChart = echarts.init(document.getElementById('mapLeft'),'halloween');
+
+		//使用制定的配置项和数据显示图表
+		myChart.setOption(optionMap);
+
+
+		function getCity(name) {
+
+			var cityData = new Dictionary();
+
+			// 获取name省份的城市,并置0.
+			for (i = 0; i < a.length; i++) {
+				if (a[i][2] == name) {
+					cityData.add(a[i][3], 0);
+				}
+			};
+			// console.log(cityData);
+			// 城市+人数
+			for (i = 0; i < a.length; i++) {
+				if (a[i][2] == name) {
+					cityData.find(a[i][3]);
+				}
+			};
+
+			option = {
+				title: {
+					text: '城市分布',
+					subtext: '数据来自于比赛',
+					x: 'center'
+				},
+				tooltip: {
+					trigger: 'item',
+					formatter: "{a} <br/>{b} : {c} ({d}%)"
+				},
+				legend: {
+					x: 'center',
+					y: 'bottom',
+					data: ['rose1', 'rose2', 'rose3', 'rose4', 'rose5', 'rose6', 'rose7', 'rose8']
+				},
+				toolbox: {
+					show: true,
+					feature: {
+						mark: {
+							show: true
+						},
+						dataView: {
+							show: true,
+							readOnly: false
+						},
+						magicType: {
+							show: true,
+							type: ['pie', 'funnel']
+						},
+						restore: {
+							show: true
+						},
+						saveAsImage: {
+							show: true
+						}
+					}
+				},
+				calculable: true,
+				series: [{
+					name: '城市分布',
+					type: 'pie',
+					radius: [50, 180],
+					roseType: 'area',
+					data: cityData.show(),
+				}]
+			};
+
+			var myChart2 = echarts.init(document.getElementById('mapRight'),'halloween');
+
+			//使用制定的配置项和数据显示图表
+			myChart2.setOption(option);
+
+
+		}
+
+		function setSex(name) {
+			// console.log(name)
+			let boy = 0;
+			let girl = 0;
+			for (i = 0; i < a.length; i++) {
+				if (a[i][2] == name) {
+					// console.log(a[4])
+					if (a[i][4] == "女") {
+						girl += 1
+					} else if (a[i][4] == "男") {
+						boy += 1
+					}
+				}
+			}
+
+			sexOption = {
+				title: {
+					text: '男女比例分布图',
+					subtext: '数据来源于比赛',
+					x: 'center'
+				},
+				tooltip: {
+					trigger: 'item',
+					formatter: "{a} <br/>{b} : {c} ({d}%)"
+				},
+				series: [{
+					name: '比例分布',
+					type: 'pie',
+					radius: '55%',
+					center: ['50%', '60%'],
+					data: [{
+							value: boy,
+							name: '男'
+						},
+						{
+							value: girl,
+							name: '女'
+						},
+					],
+					itemStyle: {
+						emphasis: {
+							shadowBlur: 10,
+							shadowOffsetX: 0,
+							shadowColor: 'rgba(0, 0, 0, 0.5)'
+						}
+					},
+					label: {
+						normal: {
+							position: ['10%', '0%'], //此处调节显示的位置
+							formatter: function(params) {
+								let show;
+								show = params.name + ':' + params.percent + '%\n总计：' + params.data.value + '人';
+								// console.log(params);
+								return show;
+								// return  Pm[params.seriesIndex][0]+':'+Pm[params.seriesIndex][1];
+							},
+							fontSize: 13, //设置字体大小
+						}
+					}
+				}]
+			};
+			var myChart3 = echarts.init(document.getElementById("mapDown"),'halloween');
+			myChart3.setOption(sexOption);
+
+
+
+		}
+
+
+
+
+		myChart.on('click', function(params) {
+			// console.log(params)
+			getCity(params.name);
+			setSex(params.name);
+			// console.log(params.name);
+		});
+
+
+
+		/*****************************创建字典**********************************************/
+		function add(key, value) { // 添加字典的键值(key:value)
+			this.dataStore[key] = value;
+		}
+
+		function show() { //显示字典中的键值(key:value)
+			var b = new Array();
+			for (var key in this.dataStore) {
+				b.push({
+					name: key,
+					value: this.dataStore[key]
+				})
+				// console.log(key + " : " + this.dataStore[key]);
+			}
+			return b
+		}
+
+		function find(key) { // 根据键(key)查找对应的值(value),返回值value
+			this.dataStore[key] = this.dataStore[key] + 1
+			return this.dataStore[key];
+		}
+
+		function remove(key) { // 根据键(key)删除对应的值(value)
+			delete this.dataStore[key];
+		}
+
+		function count() { // 计算字典中的元素个数
+			var n = 0;
+			for (var key in Object.keys(this.dataStore)) {
+				++n;
+			}
+			return n;
+		}
+
+		function kSort() { // 字典按值(value)排序,并输出排序后的结果
+			var dic = this.dataStore;
+			var res = Object.keys(dic).sort();
+			for (var key in res) {
+				console.log(res[key] + " : " + dic[res[key]]);
+			}
+		}
+
+		function vSort() { // 字典按值(value)排序,并输出排序后的结果
+			var dic = this.dataStore;
+			var res = Object.keys(dic).sort(function(a, b) {
+				return dic[a] - dic[b];
+			});
+			for (var key in res) {
+				console.log(res[key] + " : " + dic[res[key]]);
+			}
+		}
+
+		function clear() { // 清空字典内容
+			for (var key in this.dataStore) {
+				delete this.dataStore[key];
+			}
+		}
+
+		function Dictionary() {
+			this.dataStore = new Array(); // 定义一个数组，保存字典元素
+			this.add = add; // 添加字典内容(key:value)
+			this.show = show; // 显示字典中的键值
+			this.find = find; // 根据键(key)查找并返回对应的值(value)
+			this.remove = remove; // 删掉相对应的键值
+			this.count = count; // 计算字典中的元素的个数
+			this.kSort = kSort; // 按键(key)排序
+			this.vSort = vSort; // 按值(value)排序
+			this.clear = clear; // 清空字典内容
+		}
+		/**********************字典结束*********************************/
+
+		// console.log(provinceData);
+		// console.log(provinceData.show());
+	</script>
+</html>
