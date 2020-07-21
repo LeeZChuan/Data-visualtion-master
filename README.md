@@ -1,6 +1,6 @@
 ### We are hero小组
 ### TIANCHI可视化大赛--成绩可视化系统
-### Author：
+### Digital-Intelligence-Education-Data-Visualization-Innovation-Competition
 ### Date：2019.5.5
 
 
